@@ -14,9 +14,6 @@ deathData <- parseSourceData(deathSourceFile)
 # The options are required for generating the correct graph titles later on
 countryOptions <- getCountryOptions(sourceMetadataFile)
 regionOptions <- getRegionOptions(sourceMetadataFile)
-print(countryOptions)
-print(names(which(countryOptions == "DEU")))
-#print(names("Germany" %in% countryOptions))
 
 shinyServer(function(input, output, session) {
     
