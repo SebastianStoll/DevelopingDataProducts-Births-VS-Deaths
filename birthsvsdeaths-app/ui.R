@@ -1,6 +1,6 @@
 library(shiny)
 
-source("dataLoader.R")
+source("dataFunctions.R")
 
 # Load country and region options based on the supplied metadata
 # The files for births and deaths are the same so it is sufficient to
@@ -28,7 +28,10 @@ shinyUI(fluidPage(
                         selected = "DEFAULT"),
             sliderInput("years", "Select a year range:",
                         min = 1960, max = 2013, value = c(1960,2013)),
-            checkboxInput("zeroYLimit", label = "Set y limit to 0", value = TRUE)
+            checkboxInput("zeroYLimit", label = "Set y limit to 0", value = TRUE),
+            helpText("Select a country or region to update the a graph displaying",
+                     "the development of births and deaths per 1000 population. ",
+                     "Change the time period resultion with the year input slider.")
         ),
         
         # Show a plot of the generated distribution

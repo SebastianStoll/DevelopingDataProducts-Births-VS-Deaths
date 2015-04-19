@@ -1,6 +1,6 @@
 library(shiny)
 
-source("dataLoader.R")
+source("dataFunctions.R")
 source("metricsFunctions.R")
 
 # Prepare and load all source data and metadata files
