@@ -67,8 +67,8 @@ shinyServer(function(input, output, session) {
           
           #Get metrics for selected country or region if selected
           if(!is.na(code)) {
-              births <- getCountryMetrics(birthData,code,yearStart,yearEnd)
-              deaths <- getCountryMetrics(deathData,code,yearStart,yearEnd)
+              births <- getMetrics(birthData,code,yearStart,yearEnd)
+              deaths <- getMetrics(deathData,code,yearStart,yearEnd)
               yMax <- max(max(births, na.rm = TRUE),max(deaths, na.rm = TRUE))
               yMin <- min(min(births, na.rm = TRUE),min(deaths, na.rm = TRUE))
               if(input$zeroYLimit == TRUE) {

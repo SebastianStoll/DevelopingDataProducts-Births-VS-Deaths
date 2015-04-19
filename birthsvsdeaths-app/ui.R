@@ -29,9 +29,9 @@ shinyUI(fluidPage(
             sliderInput("years", "Select a year range:",
                         min = 1960, max = 2013, value = c(1960,2013)),
             checkboxInput("zeroYLimit", label = "Set y limit to 0", value = TRUE),
-            helpText("Select a country or region to update the a graph displaying",
+            helpText("Select a country or region to update the graph displaying",
                      "the development of births and deaths per 1000 population. ",
-                     "Change the time period resultion with the year input slider.")
+                     "Change the time period resultion with the year range slider.")
         ),
         
         # Show a plot of the generated distribution
